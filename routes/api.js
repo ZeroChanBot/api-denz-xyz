@@ -3,12 +3,12 @@ var favicon = require('serve-favicon');
 var express = require('express');
 var db = require(__path + '/database/db');
 try {
-var zahirr = db.get("zahirr");
+var zahirr = db.get("zeroo");
 } catch (e) {
 	console.log('')  
 }
  
-var creator = "@only_fxc7"
+var creator = "@ZEROBOT"
 var secure = require('ssl-express-www');
 var cors = require('cors');
 var fetch = require('node-fetch');
@@ -165,7 +165,7 @@ loghandler = {
     error: {
         status: false,
         creator: `${creator}`,
-        message: 'emror bruh'
+        message: 'error kak'
     }
 }
 
@@ -175,7 +175,7 @@ Akhir Pesan Error
 
 router.use(favicon(__path + "/views/favicon.ico"));
 
-const listkey = ["Fxc7", "manogay"];
+const listkey = ["zeroganteng", "zeroteam"];
 
 router.post("/apikey", async (req, res, next) => {
   const key = req.query.key;
@@ -186,7 +186,7 @@ router.post("/apikey", async (req, res, next) => {
   } else {
     listkey.push(key);
     res.json({
-      message: `berhasil mendaftarkan ${key} Kedatabase apikey`
+      message: `Suskes Mendaftarkan ${key} Ke database apikey`
     });
   }
 });
